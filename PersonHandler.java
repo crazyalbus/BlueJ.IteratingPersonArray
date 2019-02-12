@@ -1,4 +1,4 @@
-package com.zipcodewilmington;
+ 
 
 /**
  * Created by leon on 1/24/18.
@@ -11,7 +11,14 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
+        int counter = 0;
         String result = "";
+        
+        while (counter < personArray.length) {
+            result = result + personArray[counter].toString();
+            counter ++;
+            
+        }
         // assume there is a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -38,7 +45,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+            for(int i=0; i<personArray.length; i++) {
+            result = result + personArray[i].toString();
+            }
         return result;
     }
 
@@ -54,7 +63,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+            for(Person person : personArray) {
+                result = result + person.toString();
+            }
         return result;
     }
 
